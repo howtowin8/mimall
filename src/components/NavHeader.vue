@@ -1,5 +1,5 @@
 <template>
-    <idv></idv>
+    <div>nav-header</div>
 </template>
 
 <script>
