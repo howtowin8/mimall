@@ -22,7 +22,8 @@ export default {
     // storage.setItem('a',1);
     // storage.setItem('a',1,'user');
     // storage.clear('mall');
-    this.axios.get('/mock/user/login.json').then((res)=>{
+    // 本地加载请求静态json文件的形式
+    this.axios.get('/user/login').then((res)=>{
       this.res = res;
     });
   }
