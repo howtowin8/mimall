@@ -2,6 +2,7 @@ import Vue from 'vue'
 import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import env from './env'
 import App from './App.vue'
 
 // 根据前端的跨越方式做调整
@@ -9,6 +10,9 @@ axios.defaults.baseURL = '/api';
 
 // 请求超时设置
 axios.defaults.timeout = 8000;
+
+//根据环境变量获取不同的请求地址
+axios.defaults.baseURL = env.baseURL;
 
 // 定义接口错误拦截器
 
@@ -31,5 +35,3 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-
-// 哈哈哈哈
